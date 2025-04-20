@@ -1,0 +1,97 @@
+LIBRARIES
+1. NumPy
+📚 What it is:
+NumPy (Numerical Python) provides powerful data structures like arrays and matrices, along with functions to operate on them.
+
+🔧 Why it's used in ML:
+
+Fast operations on large datasets
+
+Essential for handling numerical data
+
+Underlies many other libraries (like Pandas, TensorFlow)
+
+✅ Example usage:
+You use NumPy to scale or transform data, do matrix operations, and implement low-level ML algorithms.
+
+2. Pandas
+📚 What it is:
+Pandas is a data manipulation and analysis library. It’s built on top of NumPy but offers more high-level structures like DataFrames.
+
+🔧 Why it's used in ML:
+
+Cleaning and preprocessing data
+
+Handling missing values, filtering rows/columns
+
+Converting data into a format suitable for modeling
+
+✅ Example usage:
+You use Pandas to read CSV files, filter out rows, compute statistics, and prepare datasets before training.
+
+3. Matplotlib / Seaborn
+📚 What it is:
+
+Matplotlib: A 2D plotting library.
+
+Seaborn: Built on top of Matplotlib with a more attractive interface and easier syntax for statistical plots.
+
+🔧 Why they're used in ML:
+
+Visualizing data distributions
+
+Plotting model performance (like loss curves, accuracy, etc.)
+
+Creating correlation heatmaps
+
+✅ Example usage:
+You use these libraries to understand the structure and distribution of your data, which helps in feature engineering and model tuning.
+
+4. Scikit-learn (sklearn)
+📚 What it is:
+Scikit-learn is the most popular ML library for traditional (non-deep-learning) algorithms.
+
+🔧 Why it's used in ML:
+
+Tons of built-in models (like SVM, Random Forest, KNN, etc.)
+
+Preprocessing tools (like scaling, encoding, train-test splitting)
+
+Easy-to-use API for model training and evaluation
+
+✅ Example usage:
+Train a model like LinearRegression or DecisionTreeClassifier with just a few lines of code.
+
+5. TensorFlow / Keras
+📚 What it is:
+
+TensorFlow: An open-source deep learning framework by Google.
+
+Keras: A high-level API running on top of TensorFlow, making it easier to define models.
+
+🔧 Why it's used in ML:
+
+Build and train deep neural networks
+
+Great for complex tasks like image recognition, NLP, etc.
+
+Scalable for production environments
+
+✅ Example usage:
+Used for deep learning tasks with large datasets and custom architectures (like CNNs, RNNs, Transformers).
+
+6. PyTorch
+📚 What it is:
+An open-source deep learning library developed by Facebook AI.
+
+🔧 Why it's used in ML:
+
+Dynamic computation graphs (great for debugging and experimentation)
+
+Cleaner, more Pythonic syntax than TensorFlow
+
+Widely used in research
+
+✅ Example usage:
+Similar to TensorFlow, but preferred for rapid prototyping of deep learning models.
+
