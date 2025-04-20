@@ -1,0 +1,35 @@
+📘 Data Normalization in Jupyter Notebook
+python
+Copy
+Edit
+# Import libraries
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+
+# Sample dataset
+data = {
+    'Height': [150, 160, 170, 180, 190],
+    'Weight': [65, 70, 80, 85, 90],
+    'Age': [22, 25, 30, 35, 40]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+print("Original Data:")
+print(df)
+
+# -------------------------------------
+# 1. Min-Max Normalization (scales values between 0 and 1)
+min_max_scaler = MinMaxScaler()
+df_minmax = pd.DataFrame(min_max_scaler.fit_transform(df), columns=df.columns)
+
+print("\nMin-Max Normalized Data:")
+print(df_minmax)
+
+# -------------------------------------
+# 2. Z-Score Standardization (mean = 0, std = 1)
+standard_scaler = StandardScaler()
+df_standard = pd.DataFrame(standard_scaler.fit_transform(df), columns=df.columns)
+
+print("\nZ-Score Standardized Data:")
+print(df_standard)
