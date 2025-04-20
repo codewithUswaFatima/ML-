@@ -1,0 +1,71 @@
+📘 Data Visualization with Matplotlib & Seaborn
+python
+Copy
+Edit
+# Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# For inline plots in Jupyter
+%matplotlib inline
+
+# Sample dataset
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+    'Age': [25, 30, 35, 40, 45],
+    'Score': [85, 90, 75, 88, 95],
+    'Gender': ['Female', 'Male', 'Male', 'Male', 'Female']
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# ---------------------------
+# Matplotlib Visualizations
+# ---------------------------
+
+# 1. Line Plot
+plt.figure(figsize=(6, 4))
+plt.plot(df['Name'], df['Score'], marker='o')
+plt.title("Score by Person")
+plt.xlabel("Name")
+plt.ylabel("Score")
+plt.grid(True)
+plt.show()
+
+# 2. Bar Plot
+plt.figure(figsize=(6, 4))
+plt.bar(df['Name'], df['Age'], color='orange')
+plt.title("Age of People")
+plt.xlabel("Name")
+plt.ylabel("Age")
+plt.show()
+
+# ---------------------------
+# Seaborn Visualizations
+# ---------------------------
+
+# 3. Histogram
+plt.figure(figsize=(6, 4))
+sns.histplot(df['Score'], bins=5, kde=True)
+plt.title("Distribution of Scores")
+plt.show()
+
+# 4. Box Plot (by Gender)
+plt.figure(figsize=(6, 4))
+sns.boxplot(x='Gender', y='Score', data=df)
+plt.title("Score Distribution by Gender")
+plt.show()
+
+# 5. Scatter Plot (Age vs Score)
+plt.figure(figsize=(6, 4))
+sns.scatterplot(x='Age', y='Score', hue='Gender', data=df)
+plt.title("Age vs Score (colored by Gender)")
+plt.show()
+
+# 6. Heatmap (Correlation matrix)
+plt.figure(figsize=(6, 4))
+sns.heatmap(df[['Age', 'Score']].corr(), annot=True, cmap='coolwarm')
+plt.title("Correlation Heatmap")
+plt.show()
