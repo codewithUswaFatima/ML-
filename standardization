@@ -1,0 +1,27 @@
+📘 Standardization in Jupyter Notebook
+python
+Copy
+Edit
+# Import libraries
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Sample dataset
+data = {
+    'Height': [150, 160, 170, 180, 190],
+    'Weight': [65, 70, 80, 85, 90],
+    'Age': [22, 25, 30, 35, 40]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+print("Original Data:")
+print(df)
+
+# -------------------------------------
+# Standardization (Z-score normalization)
+scaler = StandardScaler()
+df_standardized = pd.DataFrame(scaler.fit_transform(df), columns=df.columns)
+
+print("\nStandardized Data (Z-score):")
+print(df_standardized)
