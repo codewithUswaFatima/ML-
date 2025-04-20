@@ -1,0 +1,52 @@
+📘 Handling Missing Values – Code Example
+python
+Copy
+Edit
+# Importing pandas
+import pandas as pd
+
+# Sample dataset with missing values
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Age': [25, None, 30, None],
+    'City': ['New York', 'Los Angeles', None, 'Chicago']
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Display original DataFrame
+print("Original DataFrame:")
+print(df)
+
+# -------------------------------------
+# 1. Check for missing values
+print("\nMissing values (count per column):")
+print(df.isnull().sum())
+
+# -------------------------------------
+# 2. Drop rows with any missing values
+df_dropped = df.dropna()
+print("\nDataFrame after dropping rows with missing values:")
+print(df_dropped)
+
+# -------------------------------------
+# 3. Fill missing values with a specific value
+df_filled = df.fillna({
+    'Age': df['Age'].mean(),  # Fill Age with mean
+    'City': 'Unknown'         # Fill City with 'Unknown'
+})
+print("\nDataFrame after filling missing values:")
+print(df_filled)
+
+# -------------------------------------
+# 4. Forward fill (ffill)
+df_ffill = df.fillna(method='ffill')
+print("\nDataFrame with forward fill:")
+print(df_ffill)
+
+# -------------------------------------
+# 5. Backward fill (bfill)
+df_bfill = df.fillna(method='bfill')
+print("\nDataFrame with backward fill:")
+print(df_bfill)
